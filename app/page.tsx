@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from "./page.module.css";
 
 type Option = {
@@ -33,9 +33,9 @@ export default function Home() {
     }
   };
 
-  useState(() => {
+  useEffect(() => {
     fetchQuestion(step);
-  }, []);
+  }, [step]);
 
   return (
     <div className={styles.page}>
