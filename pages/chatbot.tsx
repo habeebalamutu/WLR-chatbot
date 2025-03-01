@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from 'react';
-import styles from "./page.module.css";
+import styles from './chatbot.module.css';
 
 type Option = {
   text: string;
@@ -13,7 +11,7 @@ type Question = {
   options: Option[];
 };
 
-export default function Home() {
+export default function Chatbot() {
   const [step, setStep] = useState(0);
   const [question, setQuestion] = useState<Question | null>(null);
   const [result, setResult] = useState<string | null>(null);
@@ -41,6 +39,7 @@ export default function Home() {
     <div className={styles.page}>
       <div className={styles.container}>
         <h1>Tech Career Path Recommendation Chatbot</h1>
+        <p>Hi there! Not sure which tech career is right for you? Answer a few questions, and I’ll help you decide!</p>
         {question && (
           <div>
             <p>{question.question}</p>
@@ -62,8 +61,11 @@ export default function Home() {
           </div>
         )}
       </div>
-      <main className={styles.main}>
-      </main>
+      <footer className={styles.footer}>
+        <p>
+          Built by <a href="https://www.linkedin.com/company/welearnremotely">WeLearnRemotely</a> with ❤️.
+        </p>
+      </footer>
     </div>
   );
 }
