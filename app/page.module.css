@@ -14,6 +14,7 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  background-color: #f9f9f9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,7 +52,7 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -59,12 +60,12 @@
 .container h1 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  color: #000;
 }
 
 .container p {
   font-size: 18px;
-  color: #555;
+  color: #000;
 }
 
 .container ul {
@@ -98,5 +99,24 @@
 }
 
 .container a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #000;
+}
+
+.footer a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.footer a:hover {
   text-decoration: underline;
 }

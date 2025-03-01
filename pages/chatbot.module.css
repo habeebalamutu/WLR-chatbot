@@ -23,12 +23,12 @@
 .container h1 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  color: #000;
 }
 
 .container p {
   font-size: 18px;
-  color: #555;
+  color: #000;
 }
 
 .container ul {
@@ -72,7 +72,7 @@
 
 .footer p {
   font-size: 14px;
-  color: #555;
+  color: #000;
 }
 
 .footer a {
