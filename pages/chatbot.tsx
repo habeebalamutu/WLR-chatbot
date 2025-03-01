@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './chatbot.module.css';
 
 type Option = {
@@ -31,9 +31,9 @@ export default function Chatbot() {
     }
   };
 
-  useState(() => {
+  useEffect(() => {
     fetchQuestion(step);
-  }, []);
+  }, [step]);
 
   return (
     <div className={styles.page}>
@@ -53,7 +53,7 @@ export default function Chatbot() {
           </div>
         )}
         {result && (
-          <div>
+          <div className={styles.result}>
             <h2>Your Recommended Career Path: {result}</h2>
             <p>
               Visit <a href="https://welearnremotely.com">WeLearnRemotely</a> for a free guide based on your choice.
