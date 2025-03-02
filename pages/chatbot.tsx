@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import styles from './chatbot.module.css';
 import Welcome from '../components/Welcome';
 
@@ -15,8 +16,8 @@ type Question = {
 export default function Chatbot() {
   const [step, setStep] = useState(0);
   const [question, setQuestion] = useState<Question | null>(null);
-  const [result, setResult] = useState<string | null>(null);
   const [started, setStarted] = useState(false);
+  const router = useRouter();
 
   const fetchQuestion = async (step: number) => {
     const res = await fetch(`/api/chatbot?step=${step}`);
@@ -26,7 +27,7 @@ export default function Chatbot() {
 
   const handleOptionClick = (next: number | string) => {
     if (typeof next === 'string') {
-      setResult(next);
+      router.push(`/result?result=${next}`);
     } else {
       setStep(next);
       fetchQuestion(next);
@@ -56,14 +57,6 @@ export default function Chatbot() {
                   </li>
                 ))}
               </ul>
-            </div>
-          )}
-          {result && (
-            <div className={styles.result}>
-              <h2>Your Recommended Career Path: <span className={styles.resultTitle}>{result}</span></h2>
-              <p>
-                Visit <a href="https://welearnremotely.com/">WeLearnRemotely</a> for a free guide based on your choice.
-              </p>
             </div>
           )}
         </div>
