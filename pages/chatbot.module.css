@@ -6,7 +6,8 @@
   min-height: 100vh;
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; 
+  color: #000; 
 }
 
 .container {
@@ -15,7 +16,7 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: #fff;
+  background-color: #fff; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -23,13 +24,13 @@
 .container h1 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #000;
+  color: #000; 
 }
 
 .container p {
   font-size: 18px;
-  color: #000;
-  margin-bottom: 20px; /* Add space between the question and the answer buttons */
+  color: #000; 
+  margin-bottom: 20px;
 }
 
 .container ul {
@@ -47,7 +48,7 @@
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #0070f3;
+  background-color: #0070f3; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -68,12 +69,12 @@
 }
 
 .result {
-  color: #0070f3;
+  color: #000000; 
   font-size: 22px;
-  font-weight: bold;
+  font-weight: lighter;
   margin-top: 20px;
   padding: 20px;
-  background-color: #e6f7ff;
+  background-color: #fff; 
   border-radius: 8px;
   text-align: center;
   max-width: 100%;
@@ -81,7 +82,7 @@
 }
 
 .result-title {
-  font-weight: bold;
+  font-weight: 900; 
 }
 
 .footer {
@@ -91,7 +92,7 @@
 
 .footer p {
   font-size: 14px;
-  color: #000;
+  color: #000; 
 }
 
 .footer a {
