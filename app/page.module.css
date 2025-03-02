@@ -66,6 +66,7 @@
 .container p {
   font-size: 18px;
   color: #000;
+  margin-bottom: 20px; /* Add space between the question and the answer buttons */
 }
 
 .container ul {

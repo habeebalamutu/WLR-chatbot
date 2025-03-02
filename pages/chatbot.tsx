@@ -60,7 +60,7 @@ export default function Chatbot() {
           )}
           {result && (
             <div className={styles.result}>
-              <h2>Your Recommended Career Path: {result}</h2>
+              <h2>Your Recommended Career Path: <span className={styles.resultTitle}>{result}</span></h2>
               <p>
                 Visit <a href="https://welearnremotely.com">WeLearnRemotely</a> for a free guide based on your choice.
               </p>
@@ -70,7 +70,7 @@ export default function Chatbot() {
       )}
       <footer className={styles.footer}>
         <p>
-          Built by <a href="https://www.linkedin.com/company/welearnremotely">WeLearnRemotely</a> with ❤️.
+          Built by <a href="https://www.linkedin.com/company/welearnremotely">WeLearnRemotely</a> ❤️.
         </p>
       </footer>
     </div>
