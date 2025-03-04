@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from './chatbot.module.css';
-import Welcome from '../components/Welcome';
 
 type Option = {
   text: string;
@@ -16,7 +15,6 @@ type Question = {
 export default function Chatbot() {
   const [step, setStep] = useState(0);
   const [question, setQuestion] = useState<Question | null>(null);
-  const [started, setStarted] = useState(false);
   const router = useRouter();
 
   const fetchQuestion = async (step: number) => {
@@ -27,7 +25,7 @@ export default function Chatbot() {
 
   const handleOptionClick = (next: number | string) => {
     if (typeof next === 'string') {
-      router.push(`/result?result=${next}`);
+      router.push(`/results?result=${next}`);
     } else {
       setStep(next);
       fetchQuestion(next);
@@ -35,35 +33,30 @@ export default function Chatbot() {
   };
 
   useEffect(() => {
-    if (started) {
-      fetchQuestion(step);
-    }
-  }, [step, started]);
+    fetchQuestion(step);
+  }, [step]);
 
   return (
     <div className={styles.page}>
-      {!started ? (
-        <Welcome onStart={() => setStarted(true)} />
-      ) : (
-        <div className={styles.container}>
-          <h1>Tech Career Path Recommendation Chatbot</h1>
-          {question && (
-            <div>
-              <p>{question.question}</p>
-              <ul>
-                {question.options.map((option, index) => (
-                  <li key={index}>
-                    <button onClick={() => handleOptionClick(option.next)}>{option.text}</button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
+      <div className={styles.container}>
+        <h1>Tech Career Path Recommendation Chatbot</h1>
+        <p>Hi there! Not sure which tech career is right for you? Answer a few questions, and I’ll help you decide!</p>
+        {question && (
+          <div>
+            <p>{question.question}</p>
+            <ul>
+              {question.options.map((option, index) => (
+                <li key={index}>
+                  <button onClick={() => handleOptionClick(option.next)}>{option.text}</button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
       <footer className={styles.footer}>
         <p>
-          Built by <a href="https://www.linkedin.com/company/we-learn-remotely/">WeLearnRemotely</a> with ❤️.
+          Built by <a href="https://www.linkedin.com/company/welearnremotely">WeLearnRemotely</a> with ❤️.
         </p>
       </footer>
     </div>

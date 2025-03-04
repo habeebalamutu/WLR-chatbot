@@ -1,19 +1,13 @@
 .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: auto 1fr 20px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9; /* Change background color to white */
+  color: #000; /* Change text color to black */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,7 +45,7 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #fff; /* Keep container background white */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -59,29 +53,31 @@
 .container h1 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  color: #000; /* Change text color to black */
 }
 
 .container p {
   font-size: 18px;
-  color: #555;
+  color: #000; /* Change text color to black */
+  margin-bottom: 20px; /* Add space between the question and the answer buttons */
 }
 
 .container ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  gap: 10px;
 }
 
 .container li {
-  margin: 10px 0;
+  margin: 0;
 }
 
 .container button {
-  margin: 10px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #0070f3;
+  background-color: #0070f3; /* Change button background to blue */
   color: white;
   border: none;
   border-radius: 4px;
@@ -93,10 +89,66 @@
 }
 
 .container a {
-  color: #0070f3;
+  color: #0070f3; /* Change link color to blue */
   text-decoration: none;
 }
 
 .container a:hover {
   text-decoration: underline;
+}
+
+.result {
+  color: #000; /* Change result text color to black */
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff; /* Change result background to white */
+  border-radius: 8px;
+  text-align: center;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.result-title {
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #000; /* Change text color to black */
+}
+
+.footer a {
+  color: #0070f3; /* Change link color to blue */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .result {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .container h1 {
+    font-size: 20px;
+  }
+
+  .container p {
+    font-size: 16px;
+  }
+
+  .container button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
