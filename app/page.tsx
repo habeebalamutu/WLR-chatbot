@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation'; // Use 'next/navigation' for client-side routing
 import styles from "./page.module.css";
 import Welcome from "../components/Welcome";
 
