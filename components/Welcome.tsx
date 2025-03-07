@@ -8,7 +8,7 @@ export default function Welcome({ onStart }: WelcomeProps) {
   return (
     <div className={styles.welcome}>
       <h1>Welcome to the Tech Career Path Recommendation Chatbot</h1>
-      <p>Hi there! Not sure which tech career is right for you? Click the button below to start the questionnaire and I’ll help you decide!</p>
+      <p>Hey there! Choosing a tech career can be tricky, but don’t worry—I’ll help you figure out what fits you best. Just answer a few simple questions, and I’ll guide you!</p>
       <button onClick={onStart}>Start</button>
     </div>
   );

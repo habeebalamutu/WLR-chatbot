@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation'; // Use 'next/navigation' for client-side routing
+import { useRouter } from 'next/navigation';
 import styles from './chatbot.module.css';
 
 type Option = {
@@ -40,7 +40,6 @@ export default function Chatbot() {
     <div className={styles.page}>
       <div className={styles.container}>
         <h1>Tech Career Path Recommendation Chatbot</h1>
-        <p>Hi there! Not sure which tech career is right for you? Answer a few questions, and I’ll help you decide!</p>
         {question && (
           <div>
             <p>{question.question}</p>

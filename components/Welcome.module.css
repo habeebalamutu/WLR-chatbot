@@ -6,20 +6,20 @@
   min-height: 100vh;
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f9f9f9; 
-  text-align: center; /* Center the text */
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
 .welcome h1 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #000; 
-  text-align: center; /* Center the title */
+  color: #000;
+  text-align: center;
 }
 
 .welcome p {
   font-size: 18px;
-  color: #000; 
+  color: #000;
   text-align: center;
 }
 
@@ -28,7 +28,7 @@
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #0070f3; 
+  background-color: #0070f3;
   color: white;
   border: none;
   border-radius: 4px;
